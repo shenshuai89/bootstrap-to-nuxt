@@ -11,9 +11,15 @@ importers:
       '@nuxtjs/style-resources':
         specifier: ^1.2.2
         version: 1.2.2
+      drizzle-orm:
+        specifier: ^0.44.4
+        version: 0.44.4(mysql2@3.14.3)
+      mysql2:
+        specifier: ^3.14.3
+        version: 3.14.3
       nuxt:
         specifier: ^4.0.3
-        version: 4.0.3(@netlify/blobs@9.1.2)(@parcel/watcher@2.5.1)(@types/node@24.2.1)(@vue/compiler-sfc@3.5.18)(db0@0.3.2)(ioredis@5.7.0)(magicast@0.3.5)(rollup@4.46.2)(terser@5.43.1)(typescript@5.9.2)(vite@7.1.1(@types/node@24.2.1)(jiti@2.5.1)(terser@5.43.1)(yaml@2.8.1))(yaml@2.8.1)
+        version: 4.0.3(@netlify/blobs@9.1.2)(@parcel/watcher@2.5.1)(@types/node@24.2.1)(@vue/compiler-sfc@3.5.18)(db0@0.3.2(drizzle-orm@0.44.4(mysql2@3.14.3))(mysql2@3.14.3))(drizzle-orm@0.44.4(mysql2@3.14.3))(ioredis@5.7.0)(magicast@0.3.5)(mysql2@3.14.3)(rollup@4.46.2)(terser@5.43.1)(typescript@5.9.2)(vite@7.1.1(@types/node@24.2.1)(jiti@2.5.1)(terser@5.43.1)(yaml@2.8.1))(yaml@2.8.1)
       prettier-plugin-tailwindcss:
         specifier: ^0.6.14
         version: 0.6.14(prettier@3.6.2)
@@ -1452,6 +1458,10 @@ packages:
     peerDependencies:
       postcss: ^8.1.0
 
+  aws-ssl-profiles@1.1.2:
+    resolution: {integrity: sha512-NZKeq9AfyQvEeNlN0zSYAaWrmBffJh3IELMZfRpJVWgrpEbtEpnjvzqBPf+mxoI287JohRDoa+/nsfqqiZmF6g==}
+    engines: {node: '>= 6.0.0'}
+
   b4a@1.6.7:
     resolution: {integrity: sha512-OnAYlL5b7LEkALw87fUVafQw5rVR9RjwGd4KUwNQ6DrrNmaVaUCgLipfVlzrPQ4tWOR9P0IXGNOx50jYCCdSJg==}
 
@@ -1904,6 +1914,98 @@ packages:
     resolution: {integrity: sha512-kQhDYKZecqnM0fCnzI5eIv5L4cAe/iRI+HqMbO/hbRdTAeXDG+M9FjipUxNfbARuEg4iHIbhnhs78BCHNbSxEQ==}
     engines: {node: '>=12'}
 
+  drizzle-orm@0.44.4:
+    resolution: {integrity: sha512-ZyzKFpTC/Ut3fIqc2c0dPZ6nhchQXriTsqTNs4ayRgl6sZcFlMs9QZKPSHXK4bdOf41GHGWf+FrpcDDYwW+W6Q==}
+    peerDependencies:
+      '@aws-sdk/client-rds-data': '>=3'
+      '@cloudflare/workers-types': '>=4'
+      '@electric-sql/pglite': '>=0.2.0'
+      '@libsql/client': '>=0.10.0'
+      '@libsql/client-wasm': '>=0.10.0'
+      '@neondatabase/serverless': '>=0.10.0'
+      '@op-engineering/op-sqlite': '>=2'
+      '@opentelemetry/api': ^1.4.1
+      '@planetscale/database': '>=1.13'
+      '@prisma/client': '*'
+      '@tidbcloud/serverless': '*'
+      '@types/better-sqlite3': '*'
+      '@types/pg': '*'
+      '@types/sql.js': '*'
+      '@upstash/redis': '>=1.34.7'
+      '@vercel/postgres': '>=0.8.0'
+      '@xata.io/client': '*'
+      better-sqlite3: '>=7'
+      bun-types: '*'
+      expo-sqlite: '>=14.0.0'
+      gel: '>=2'
+      knex: '*'
+      kysely: '*'
+      mysql2: '>=2'
+      pg: '>=8'
+      postgres: '>=3'
+      prisma: '*'
+      sql.js: '>=1'
+      sqlite3: '>=5'
+    peerDependenciesMeta:
+      '@aws-sdk/client-rds-data':
+        optional: true
+      '@cloudflare/workers-types':
+        optional: true
+      '@electric-sql/pglite':
+        optional: true
+      '@libsql/client':
+        optional: true
+      '@libsql/client-wasm':
+        optional: true
+      '@neondatabase/serverless':
+        optional: true
+      '@op-engineering/op-sqlite':
+        optional: true
+      '@opentelemetry/api':
+        optional: true
+      '@planetscale/database':
+        optional: true
+      '@prisma/client':
+        optional: true
+      '@tidbcloud/serverless':
+        optional: true
+      '@types/better-sqlite3':
+        optional: true
+      '@types/pg':
+        optional: true
+      '@types/sql.js':
+        optional: true
+      '@upstash/redis':
+        optional: true
+      '@vercel/postgres':
+        optional: true
+      '@xata.io/client':
+        optional: true
+      better-sqlite3:
+        optional: true
+      bun-types:
+        optional: true
+      expo-sqlite:
+        optional: true
+      gel:
+        optional: true
+      knex:
+        optional: true
+      kysely:
+        optional: true
+      mysql2:
+        optional: true
+      pg:
+        optional: true
+      postgres:
+        optional: true
+      prisma:
+        optional: true
+      sql.js:
+        optional: true
+      sqlite3:
+        optional: true
+
   dunder-proto@1.0.1:
     resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
     engines: {node: '>= 0.4'}
@@ -2129,6 +2231,9 @@ packages:
     resolution: {integrity: sha512-trLf4SzuuUxfusZADLINj+dE8clK1frKdmqiJNb1Es75fmI5oY6X2mxLVUciLLjxqw/xr72Dhy+lER6dGd02FQ==}
     engines: {node: '>=10'}
 
+  generate-function@2.3.1:
+    resolution: {integrity: sha512-eeB5GfMNeevm/GRYq20ShmsaGcmI81kIX2K9XQx5miC8KdHaC6Jm0qQ8ZNeGOi7wYB8OsdxKs+Y2oVuTFuVwKQ==}
+
   gensync@1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
     engines: {node: '>=6.9.0'}
@@ -2255,6 +2360,10 @@ packages:
     resolution: {integrity: sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==}
     engines: {node: '>=16.17.0'}
 
+  iconv-lite@0.6.3:
+    resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
+    engines: {node: '>=0.10.0'}
+
   ieee754@1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
 
@@ -2350,6 +2459,9 @@ packages:
   is-plain-obj@2.1.0:
     resolution: {integrity: sha512-YWnfyRwxL/+SsrWYfOpUtz5b3YD+nyfkHvjbcanzk8zgyO4ASD67uVMRt8k5bM4lLMDnXfriRhOpemw+NfT1eA==}
     engines: {node: '>=8'}
+
+  is-property@1.0.2:
+    resolution: {integrity: sha512-Ks/IoX00TtClbGQr4TWXemAnktAQvYB7HzcCxDGqEZU6oCmb2INHuOoKxbtR+HFkmYWBKv/dOZtGRiAjDhj92g==}
 
   is-reference@1.2.1:
     resolution: {integrity: sha512-U82MsXXiFIrjCK4otLT+o2NA2Cd2g5MLoOVXUZjIOhLurrRxpEXzI8O0KZHr3IjLvlAH1kTPYSuqer5T9ZVBKQ==}
@@ -2512,11 +2624,22 @@ packages:
     resolution: {integrity: sha512-TFYA4jnP7PVbmlBIfhlSe+WKxs9dklXMTEGcBCIvLhE/Tn3H6Gk1norupVW7m5Cnd4bLcr08AytbyV/xj7f/kQ==}
     engines: {node: '>= 12.0.0'}
 
+  long@5.3.2:
+    resolution: {integrity: sha512-mNAgZ1GmyNhD7AuqnTG3/VQ26o760+ZYBPKjPvugO8+nLbYfX6TVpJPseBvopbdY+qpZ/lKUnmEc1LeZYS3QAA==}
+
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
 
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
+
+  lru-cache@7.18.3:
+    resolution: {integrity: sha512-jumlc0BIUrS3qJGgIkWZsyfAM7NCWiBcCDhnd+3NNM5KbBmLTgHVfWBcg6W+rLUsIpzpERPsvwUP7CckAQSOoA==}
+    engines: {node: '>=12'}
+
+  lru.min@1.1.2:
+    resolution: {integrity: sha512-Nv9KddBcQSlQopmBHXSsZVY5xsdlZkdH/Iey0BlcBYggMd4two7cZnKOK9vmy3nY0O5RGH99z1PCeTpPqszUYg==}
+    engines: {bun: '>=1.0.0', deno: '>=1.30.0', node: '>=8.0.0'}
 
   luxon@3.7.1:
     resolution: {integrity: sha512-RkRWjA926cTvz5rAb1BqyWkKbbjzCGchDUIKMCUvNi17j6f6j8uHGDV82Aqcqtzd+icoYpELmG3ksgGiFNNcNg==}
@@ -2635,6 +2758,14 @@ packages:
 
   muggle-string@0.4.1:
     resolution: {integrity: sha512-VNTrAak/KhO2i8dqqnqnAHOa3cYBwXEZe9h+D5h/1ZqFSTEFHdM65lR7RoIqq3tBBYavsOXV84NoHXZ0AkPyqQ==}
+
+  mysql2@3.14.3:
+    resolution: {integrity: sha512-fD6MLV8XJ1KiNFIF0bS7Msl8eZyhlTDCDl75ajU5SJtpdx9ZPEACulJcqJWr1Y8OYyxsFc4j3+nflpmhxCU5aQ==}
+    engines: {node: '>= 8.0'}
+
+  named-placeholders@1.1.3:
+    resolution: {integrity: sha512-eLoBxg6wE/rZkJPhU/xRX1WTpkFEwDJEN96oxFrTsqBdbT5ec295Q+CoHrL9IT0DipqKhmGcaZmwOt8OON5x1w==}
+    engines: {node: '>=12.0.0'}
 
   nanoid@3.3.11:
     resolution: {integrity: sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==}
@@ -3335,6 +3466,9 @@ packages:
     resolution: {integrity: sha512-b3rppTKm9T+PsVCBEOUR46GWI7fdOs00VKZ1+9c1EWDaDMvjQc6tUwuFyIprgGgTcWoVHSKrU8H31ZHA2e0RHA==}
     engines: {node: '>=10'}
 
+  safer-buffer@2.1.2:
+    resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
+
   sass-resources-loader@2.2.5:
     resolution: {integrity: sha512-po8rfETH9cOQACWxubT/1CCu77KjxwRtCDm6QAXZH99aUHBydwSoxdIjC40SGp/dcS/FkSNJl0j1VEojGZqlvQ==}
 
@@ -3356,6 +3490,9 @@ packages:
   send@1.2.0:
     resolution: {integrity: sha512-uaW0WwXKpL9blXE2o0bRhoL2EGXIrZxQ2ZQ4mgcfoBxdFmQold+qWsD2jLrfZ0trjKL6vOw0j//eAwcALFjKSw==}
     engines: {node: '>= 18'}
+
+  seq-queue@0.0.5:
+    resolution: {integrity: sha512-hr3Wtp/GZIc/6DAGPDcV4/9WoZhjrkXsi5B/07QgX8tsdc6ilr7BFM6PM6rbdAX1kFSDYeZGLipIZZKyQP0O5Q==}
 
   serialize-javascript@6.0.2:
     resolution: {integrity: sha512-Saa1xPByTTq2gdeFZYLLo+RFE35NHZkAbqZeWNd3BpzppeVisAqpDjcp8dyf6uIvEqJRd46jemmyA4iFIeVk8g==}
@@ -3455,6 +3592,10 @@ packages:
   speakingurl@14.0.1:
     resolution: {integrity: sha512-1POYv7uv2gXoyGFpBCmpDVSNV74IfsWlDW216UPjbWufNf+bSU6GdbDsxdcxtfwb4xlI3yxzOTKClUosxARYrQ==}
     engines: {node: '>=0.10.0'}
+
+  sqlstring@2.3.3:
+    resolution: {integrity: sha512-qC9iz2FlN7DQl3+wjwn3802RTyjCx7sDvfQEXchwa6CWOx07/WVfh91gBmQ9fahw8snwGEWU3xGzOt4tFyHLxg==}
+    engines: {node: '>= 0.6'}
 
   stack-trace@0.0.10:
     resolution: {integrity: sha512-KGzahc7puUKkzyMt+IqAep+TVNbKP+k2Lmwhub39m1AsTSkaDutx56aDCo+HLDzf/D26BIHTJWNiTG1KAJiQCg==}
@@ -5504,6 +5645,8 @@ snapshots:
       postcss: 8.5.6
       postcss-value-parser: 4.2.0
 
+  aws-ssl-profiles@1.1.2: {}
+
   b4a@1.6.7: {}
 
   balanced-match@1.0.2: {}
@@ -5816,7 +5959,10 @@ snapshots:
 
   data-uri-to-buffer@4.0.1: {}
 
-  db0@0.3.2: {}
+  db0@0.3.2(drizzle-orm@0.44.4(mysql2@3.14.3))(mysql2@3.14.3):
+    optionalDependencies:
+      drizzle-orm: 0.44.4(mysql2@3.14.3)
+      mysql2: 3.14.3
 
   de-indent@1.0.2: {}
 
@@ -5940,6 +6086,10 @@ snapshots:
   dotenv@16.6.1: {}
 
   dotenv@17.2.1: {}
+
+  drizzle-orm@0.44.4(mysql2@3.14.3):
+    optionalDependencies:
+      mysql2: 3.14.3
 
   dunder-proto@1.0.1:
     dependencies:
@@ -6178,6 +6328,10 @@ snapshots:
 
   fuse.js@7.1.0: {}
 
+  generate-function@2.3.1:
+    dependencies:
+      is-property: 1.0.2
+
   gensync@1.0.0-beta.2: {}
 
   get-amd-module-type@6.0.1:
@@ -6332,6 +6486,10 @@ snapshots:
 
   human-signals@5.0.0: {}
 
+  iconv-lite@0.6.3:
+    dependencies:
+      safer-buffer: 2.1.2
+
   ieee754@1.2.1: {}
 
   ignore@7.0.5: {}
@@ -6413,6 +6571,8 @@ snapshots:
   is-path-inside@4.0.0: {}
 
   is-plain-obj@2.1.0: {}
+
+  is-property@1.0.2: {}
 
   is-reference@1.2.1:
     dependencies:
@@ -6563,11 +6723,17 @@ snapshots:
       safe-stable-stringify: 2.5.0
       triple-beam: 1.4.1
 
+  long@5.3.2: {}
+
   lru-cache@10.4.3: {}
 
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
+
+  lru-cache@7.18.3: {}
+
+  lru.min@1.1.2: {}
 
   luxon@3.7.1: {}
 
@@ -6672,6 +6838,22 @@ snapshots:
 
   muggle-string@0.4.1: {}
 
+  mysql2@3.14.3:
+    dependencies:
+      aws-ssl-profiles: 1.1.2
+      denque: 2.1.0
+      generate-function: 2.3.1
+      iconv-lite: 0.6.3
+      long: 5.3.2
+      lru.min: 1.1.2
+      named-placeholders: 1.1.3
+      seq-queue: 0.0.5
+      sqlstring: 2.3.3
+
+  named-placeholders@1.1.3:
+    dependencies:
+      lru-cache: 7.18.3
+
   nanoid@3.3.11: {}
 
   nanoid@5.1.5: {}
@@ -6687,7 +6869,7 @@ snapshots:
       p-wait-for: 5.0.2
       qs: 6.14.0
 
-  nitropack@2.12.4(@netlify/blobs@9.1.2):
+  nitropack@2.12.4(@netlify/blobs@9.1.2)(drizzle-orm@0.44.4(mysql2@3.14.3))(mysql2@3.14.3):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.4.0
       '@netlify/functions': 3.1.10(rollup@4.46.2)
@@ -6709,7 +6891,7 @@ snapshots:
       cookie-es: 2.0.0
       croner: 9.1.0
       crossws: 0.3.5
-      db0: 0.3.2
+      db0: 0.3.2(drizzle-orm@0.44.4(mysql2@3.14.3))(mysql2@3.14.3)
       defu: 6.1.4
       destr: 2.0.5
       dot-prop: 9.0.0
@@ -6755,7 +6937,7 @@ snapshots:
       unenv: 2.0.0-rc.19
       unimport: 5.2.0
       unplugin-utils: 0.2.5
-      unstorage: 1.16.1(@netlify/blobs@9.1.2)(db0@0.3.2)(ioredis@5.7.0)
+      unstorage: 1.16.1(@netlify/blobs@9.1.2)(db0@0.3.2(drizzle-orm@0.44.4(mysql2@3.14.3))(mysql2@3.14.3))(ioredis@5.7.0)
       untyped: 2.0.0
       unwasm: 0.3.9
       youch: 4.1.0-beta.8
@@ -6846,7 +7028,7 @@ snapshots:
     dependencies:
       boolbase: 1.0.0
 
-  nuxt@4.0.3(@netlify/blobs@9.1.2)(@parcel/watcher@2.5.1)(@types/node@24.2.1)(@vue/compiler-sfc@3.5.18)(db0@0.3.2)(ioredis@5.7.0)(magicast@0.3.5)(rollup@4.46.2)(terser@5.43.1)(typescript@5.9.2)(vite@7.1.1(@types/node@24.2.1)(jiti@2.5.1)(terser@5.43.1)(yaml@2.8.1))(yaml@2.8.1):
+  nuxt@4.0.3(@netlify/blobs@9.1.2)(@parcel/watcher@2.5.1)(@types/node@24.2.1)(@vue/compiler-sfc@3.5.18)(db0@0.3.2(drizzle-orm@0.44.4(mysql2@3.14.3))(mysql2@3.14.3))(drizzle-orm@0.44.4(mysql2@3.14.3))(ioredis@5.7.0)(magicast@0.3.5)(mysql2@3.14.3)(rollup@4.46.2)(terser@5.43.1)(typescript@5.9.2)(vite@7.1.1(@types/node@24.2.1)(jiti@2.5.1)(terser@5.43.1)(yaml@2.8.1))(yaml@2.8.1):
     dependencies:
       '@nuxt/cli': 3.28.0(magicast@0.3.5)
       '@nuxt/devalue': 2.0.2
@@ -6881,7 +7063,7 @@ snapshots:
       mlly: 1.7.4
       mocked-exports: 0.1.1
       nanotar: 0.2.0
-      nitropack: 2.12.4(@netlify/blobs@9.1.2)
+      nitropack: 2.12.4(@netlify/blobs@9.1.2)(drizzle-orm@0.44.4(mysql2@3.14.3))(mysql2@3.14.3)
       nypm: 0.6.1
       ofetch: 1.4.1
       ohash: 2.0.11
@@ -6906,7 +7088,7 @@ snapshots:
       unimport: 5.2.0
       unplugin: 2.3.5
       unplugin-vue-router: 0.15.0(@vue/compiler-sfc@3.5.18)(typescript@5.9.2)(vue-router@4.5.1(vue@3.5.18(typescript@5.9.2)))(vue@3.5.18(typescript@5.9.2))
-      unstorage: 1.16.1(@netlify/blobs@9.1.2)(db0@0.3.2)(ioredis@5.7.0)
+      unstorage: 1.16.1(@netlify/blobs@9.1.2)(db0@0.3.2(drizzle-orm@0.44.4(mysql2@3.14.3))(mysql2@3.14.3))(ioredis@5.7.0)
       untyped: 2.0.0
       vue: 3.5.18(typescript@5.9.2)
       vue-bundle-renderer: 2.1.2
@@ -7541,6 +7723,8 @@ snapshots:
 
   safe-stable-stringify@2.5.0: {}
 
+  safer-buffer@2.1.2: {}
+
   sass-resources-loader@2.2.5:
     dependencies:
       async: 3.2.6
@@ -7571,6 +7755,8 @@ snapshots:
       statuses: 2.0.2
     transitivePeerDependencies:
       - supports-color
+
+  seq-queue@0.0.5: {}
 
   serialize-javascript@6.0.2:
     dependencies:
@@ -7681,6 +7867,8 @@ snapshots:
   spdx-license-ids@3.0.22: {}
 
   speakingurl@14.0.1: {}
+
+  sqlstring@2.3.3: {}
 
   stack-trace@0.0.10: {}
 
@@ -7928,7 +8116,7 @@ snapshots:
       picomatch: 4.0.3
       webpack-virtual-modules: 0.6.2
 
-  unstorage@1.16.1(@netlify/blobs@9.1.2)(db0@0.3.2)(ioredis@5.7.0):
+  unstorage@1.16.1(@netlify/blobs@9.1.2)(db0@0.3.2(drizzle-orm@0.44.4(mysql2@3.14.3))(mysql2@3.14.3))(ioredis@5.7.0):
     dependencies:
       anymatch: 3.1.3
       chokidar: 4.0.3
@@ -7940,7 +8128,7 @@ snapshots:
       ufo: 1.6.1
     optionalDependencies:
       '@netlify/blobs': 9.1.2
-      db0: 0.3.2
+      db0: 0.3.2(drizzle-orm@0.44.4(mysql2@3.14.3))(mysql2@3.14.3)
       ioredis: 5.7.0
 
   untun@0.1.3:

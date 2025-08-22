@@ -1751,6 +1751,7 @@
 
 <script setup>
   import { onMounted } from 'vue';
+  
   // vue script内引入assets图片的方法
   const slider1 = new URL('~/public/assets/images/slider1.jpg', import.meta.url).href;
   const slider2 = new URL('~/public/assets/images/slider2.jpg', import.meta.url).href;
@@ -1770,10 +1771,13 @@
   });
 
   // 初始化脚本
-  onMounted(() => {
+  onMounted(async() => {
     loadScriptClient();
-    // 在这里初始化轮播图等组件
+    // 在这里添加获取数据接口代码
+    const { data, pending, error } = await useFetch('/api/user');
+    console.log('data', data.value);
   });
+
 </script>
 
 <style>
