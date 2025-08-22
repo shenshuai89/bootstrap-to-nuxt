@@ -64,7 +64,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 
     // 监听路由变化，模拟每个页面的 mounted
     router.afterEach(async (to, from) => {
-      console.log('页面 mounted 模拟:', to.path);
+      // console.log('页面 mounted 模拟:', to.path);
       // 在这里执行你的逻辑
       // 加载脚本、埋点、初始化第三方库等
       // const scripts = [
