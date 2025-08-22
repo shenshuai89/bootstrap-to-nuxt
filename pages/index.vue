@@ -1751,7 +1751,7 @@
 
 <script setup>
   import { onMounted } from 'vue';
-  
+
   // vue script内引入assets图片的方法
   import slider1 from '/assets/images/slider1.jpg';
   import slider2 from '/assets/images/slider2.jpg';
@@ -1770,14 +1770,26 @@
     link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
   });
 
-  // 初始化脚本
-  onMounted(async() => {
-    loadScriptClient();
-    // 在这里添加获取数据接口代码
-    const { data, pending, error } = await useFetch('/api/user');
-    console.log('data', data.value);
-  });
+  // 判断执行环境
+  if (process.server) {
+    console.log('当前在服务端渲染 (SSR)');
+    // 可以在这里做：数据库查询、API 调用、权限校验等
+    const { data, pending, error } = await useFetch('/api/users');
+    console.log('data', data.value, pending, error);
+  }
 
+  if (process.client) {
+    console.log('当前在客户端渲染 (CSR)');
+    // 可以在这里做：监听窗口大小、操作 DOM、使用 localStorage
+    const { data, pending, error } = await useFetch('/api/user');
+    // 此处获取不到数据
+    console.log('data', data.value, pending, error);
+    // 初始化脚本
+    onMounted(async () => {
+      loadScriptClient();
+      // 在这里添加获取数据接口代码
+    });
+  }
 </script>
 
 <style>
