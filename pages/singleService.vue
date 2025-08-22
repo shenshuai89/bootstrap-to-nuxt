@@ -29,7 +29,7 @@
           <div class="col-lg-12">
             <div class="witr_text_widget">
               <div class="witr_text_widget_inner">
-                <img src="assets/images/single-service.jpg" alt="image" />
+                <img src="/assets/images/single-service.jpg" alt="image" />
                 <h2>We Make A Difference In Their Life</h2>
                 <p
                   >Up is opinion message manners correct hearing husband my. Disposing commanded
