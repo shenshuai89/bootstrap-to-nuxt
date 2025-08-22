@@ -1753,8 +1753,8 @@
   import { onMounted } from 'vue';
   
   // vue script内引入assets图片的方法
-  const slider1 = new URL('~/public/assets/images/slider1.jpg', import.meta.url).href;
-  const slider2 = new URL('~/public/assets/images/slider2.jpg', import.meta.url).href;
+  import slider1 from '/assets/images/slider1.jpg';
+  import slider2 from '/assets/images/slider2.jpg';
   defineOptions({
     name: 'IndexPage',
   });
