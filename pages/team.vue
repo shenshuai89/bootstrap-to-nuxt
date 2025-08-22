@@ -45,7 +45,7 @@
                 <div class="all_color_team">
                   <div class="witr_team_section">
                     <!-- image -->
-                    <img src="assets/images/team1.jpg" alt="image" />
+                    <img src="/assets/images/team1.jpg" alt="image" />
                     <div class="post_team_icon_8 all_team_icon_o_color">
                       <ul class="witr_pots_team_s">
                         <li
@@ -86,7 +86,7 @@
                 <div class="all_color_team">
                   <div class="witr_team_section">
                     <!-- image -->
-                    <img src="assets/images/team2.jpg" alt="image" />
+                    <img src="/assets/images/team2.jpg" alt="image" />
                     <div class="post_team_icon_8 all_team_icon_o_color">
                       <ul class="witr_pots_team_s">
                         <li
@@ -127,7 +127,7 @@
                 <div class="all_color_team">
                   <div class="witr_team_section">
                     <!-- image -->
-                    <img src="assets/images/team3.jpg" alt="image" />
+                    <img src="/assets/images/team3.jpg" alt="image" />
                     <div class="post_team_icon_8 all_team_icon_o_color">
                       <ul class="witr_pots_team_s">
                         <li
@@ -168,7 +168,7 @@
                 <div class="all_color_team">
                   <div class="witr_team_section">
                     <!-- image -->
-                    <img src="assets/images/team2.jpg" alt="image" />
+                    <img src="/assets/images/team2.jpg" alt="image" />
                     <div class="post_team_icon_8 all_team_icon_o_color">
                       <ul class="witr_pots_team_s">
                         <li
@@ -229,7 +229,7 @@
             <div class="team-part all_color_team">
               <div class="witr_team_section">
                 <!-- image -->
-                <img src="assets/images/team1.png" alt="image" />
+                <img src="/assets/images/team1.png" alt="image" />
                 <div class="team_overlay_icon all_team_icon_o_color">
                   <!-- icon -->
                   <a href="#">
@@ -252,7 +252,7 @@
             <div class="team-part all_color_team">
               <div class="witr_team_section">
                 <!-- image -->
-                <img src="assets/images/team2.png" alt="image" />
+                <img src="/assets/images/team2.png" alt="image" />
                 <div class="team_overlay_icon all_team_icon_o_color">
                   <!-- icon -->
                   <a href="#">
@@ -275,7 +275,7 @@
             <div class="team-part all_color_team">
               <div class="witr_team_section">
                 <!-- image -->
-                <img src="assets/images/team3.png" alt="image" />
+                <img src="/assets/images/team3.png" alt="image" />
                 <div class="team_overlay_icon all_team_icon_o_color">
                   <!-- icon -->
                   <a href="#">
@@ -298,7 +298,7 @@
             <div class="team-part all_color_team">
               <div class="witr_team_section">
                 <!-- image -->
-                <img src="assets/images/team4.png" alt="image" />
+                <img src="/assets/images/team4.png" alt="image" />
                 <div class="team_overlay_icon all_team_icon_o_color">
                   <!-- icon -->
                   <a href="#">
