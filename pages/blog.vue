@@ -247,12 +247,29 @@
 </template>
 
 <script setup lang="ts">
+  import { queryArticleList } from '~/server/httpApi/mock.js';
   defineOptions({
     name: 'Blog',
   });
-  // 初始化脚本
-  onMounted(() => {
-    loadScriptClient();
-  });
+
+  // 判断执行环境
+  if (process.server) {
+    console.log('当前在服务端渲染 (SSR)');
+    // 可以在这里做：数据库查询、API 调用、权限校验等
+    const res = await queryArticleList({ page: 1, limit: 6 });
+    console.log(res);
+  }
+
+  if (process.client) {
+    console.log('当前在客户端渲染 (CSR)');
+    // 可以在这里做：监听窗口大小、操作 DOM、使用 localStorage
+    const res = await queryArticleList({ page: 1, limit: 6 });
+    console.log(res);
+    // 初始化脚本
+    onMounted(async () => {
+      loadScriptClient();
+      // 在这里添加获取数据接口代码
+    });
+  }
 </script>
 <style lang="scss" scoped></style>
