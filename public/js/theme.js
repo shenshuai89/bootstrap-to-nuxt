@@ -36,27 +36,32 @@
 			/*==== One Page Nav  ====*/
 			
 			 var top_offset = $('.one_page').height() +0;
-			$('.one_page .consit_menu .nav_scroll').onePageNav({
-				currentClass: 'current',
-				changeHash: false,
-				scrollSpeed: 1000,
-				 scrollOffset: top_offset,
-				scrollThreshold: 0.5,
-				filter: '',
-				easing: 'swing',
-			});
+			 if(typeof $('.one_page .consit_menu .nav_scroll').onePageNav === 'function'){
+				$('.one_page .consit_menu .nav_scroll').onePageNav({
+					currentClass: 'current',
+					changeHash: false,
+					scrollSpeed: 1000,
+					scrollOffset: top_offset,
+					scrollThreshold: 0.5,
+					filter: '',
+					easing: 'swing',
+				});
+			 }
 
 			$(".nav_scroll > li:first-child").addClass("current");
 			
 			/*==== sticky nav 1  ====*/
-			$('.one_page').scrollToFixed({
-				preFixed: function() {
-					$(this).find('.scroll_fixed').addClass('prefix');
-				},
-				postFixed: function() {
-					$(this).find('.scroll_fixed').addClass('postfix').removeClass('prefix');
-				}
-			});	
+			if(typeof $('.one_page').scrollToFixed === 'function'){
+				$('.one_page').scrollToFixed({
+					preFixed: function() {
+						$(this).find('.scroll_fixed').addClass('prefix');
+					},
+					postFixed: function() {
+						$(this).find('.scroll_fixed').addClass('postfix').removeClass('prefix');
+					}
+				});	
+			}
+
 		
 			/*==== sticky nav 2  ====*/
 			
@@ -98,22 +103,25 @@
 			new WOW().init();
 
 			/*==== scrollUp  ====*/
-			
-			$.scrollUp({
-				scrollText: '<i class="fa fa-angle-up"></i>',
-				easingType: 'linear',
-				scrollSpeed: 900,
-				animation: 'fade'
-			});
+			if( typeof $.scrollUp === 'function'){
+				$.scrollUp({
+					scrollText: '<i class="fa fa-angle-up"></i>',
+					easingType: 'linear',
+					scrollSpeed: 900,
+					animation: 'fade'
+				});
+			}
 
 			/*==== Venubox  ====*/
-			$('.venobox').venobox({
+			if(typeof $('.venobox').venobox === 'function'){
+				$('.venobox').venobox({
 
-				numeratio: true,
+					numeratio: true,
 
-				infinigall: true
+					infinigall: true
 
-			});
+				});
+			}
 					
 			/*====== porfolio project active =======*/
 
@@ -529,11 +537,12 @@
 		}
 
 			/*==== counter active ====*/
-				
-			$('.counter').counterUp({
-				delay: 10,
-				time: 1000
-			});
+			if(typeof $('.counter').counterUp == 'function'){
+				$('.counter').counterUp({
+					delay: 10,
+					time: 1000
+				});
+			}
 			
 
 
