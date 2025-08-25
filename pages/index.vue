@@ -1774,7 +1774,7 @@
   if (process.server) {
     console.log('当前在服务端渲染 (SSR)');
     // 可以在这里做：数据库查询、API 调用、权限校验等
-    const { data, pending, error } = await useFetch('/api/users');
+    const { data, pending, error } = await useFetch('/api/user');
     console.log('data', data.value, pending, error);
   }
 
