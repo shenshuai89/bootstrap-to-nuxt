@@ -1,0 +1,76 @@
+# 使用node启动的nuxt项目
+        # 1. 静态资源：/_nuxt/ -> 指向 .output/public/
+        location /nuxtapp202504114/_nuxt/ {
+            alias /data/web/nuxt-template/202504114/.output/public/_nuxt/;
+            expires 1y;
+            add_header Cache-Control "public, immutable";
+            gzip_static on;
+        }
+
+        # 2. 其他静态资源（如 favicon、robots.txt）
+        location /nuxtapp202504114/ {
+            alias /data/web/nuxt-template/202504114/.output/public/;
+            try_files $uri $uri/ @nuxt;
+        }
+
+        # 动态请求代理到 Nuxt 服务
+        location @nuxt {
+            proxy_pass  http://127.0.0.1:8097;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        }
+
+        # API 代理
+        location /nuxtapp202504114/api/ {
+            proxy_pass http://127.0.0.1:8097;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        }
+
+
+
+
+#使用docker部署nuxt项目
+
+#== 反向代理 /nuxtapp202504114 → http://localhost:8097/nuxtapp202504114 ===
+
+        location /nuxtapp202504114/ {
+            # 1. 去掉 /nuxtapp202504114 前缀，转发到后端的 /bootstrap202504114/
+            rewrite ^/nuxtapp202504114(/.*)$ /nuxtapp202504114$1 break;
+
+            # 2. 代理到 Docker 服务
+            proxy_pass http://localhost:8097/nuxtapp202504114;
+            proxy_http_version 1.1;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+
+            # 3. 处理 WebSocket（如果用到）
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection 'upgrade';
+            proxy_cache_bypass $http_upgrade;
+        }
+
+	# 静态资源：
+        location /nuxtapp202504114/_nuxt/ {
+            # ✅ 指向 .output/public/_nuxt/
+            alias /data/web/nuxt-template/202504114/.output/public/_nuxt/;
+            
+            # 缓存设置（强烈推荐）
+            expires 1y;
+            add_header Cache-Control "public, immutable";
+            add_header Access-Control-Allow-Origin "*";
+            
+            # 开启 gzip 静态文件（如果构建时生成了 .gz）
+            gzip_static on;
+        }
+
+        location /nuxtapp202504114/assets/ {
+            alias /data/web/nuxt-template/202504114/.output/public/assets/;
+            expires 1y;
+            add_header Cache-Control "public, immutable";
+            gzip_static on;
+        }

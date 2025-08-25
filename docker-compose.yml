@@ -1,0 +1,10 @@
+version: "3"
+services:
+  nuxtapp8097:
+    image: nuxtapp8097:lastest
+    restart: unless-stopped
+    build:
+      context: ./
+    ports:
+      - 8097:8097
+    container_name: nuxtapp8097
