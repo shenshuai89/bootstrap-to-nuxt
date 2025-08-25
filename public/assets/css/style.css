@@ -1640,7 +1640,7 @@ textarea, input {
 /* single service css */
 .em_service_area {
     padding: 115px 0px 90px;
-    background-image: url("/assets/images/service-bg-img.jpg");
+    background-image: url("../images/service-bg-img.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1700,7 +1700,7 @@ textarea, input {
 .em_single_service .service_inner_content h3 a:hover{
 }
 .em_single_service:hover, .witr_service_front_3d {
-    background-image: url("/assets/images/service-img.png");
+    background-image: url("../images/service-img.png");
     background-repeat: no-repeat;
     background-size: cover;
 	border-color:#293C94;
@@ -1732,7 +1732,7 @@ textarea, input {
 
 /* port area css */
 .consit_service_area2 {
-    background-image: url("/assets/images/port-bg-img.jpg");
+    background-image: url("../images/port-bg-img.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 120px 0px 110px;
@@ -1874,7 +1874,7 @@ textarea, input {
 .witr_servicetwo_text::after {
     content: '';
     position: absolute;
-    background: url(/assets/images/service-shape-hover2.png) no-repeat bottom right;
+    background: url(../images/service-shape-hover2.png) no-repeat bottom right;
     width: 50%;
     height: 100%;
     z-index: 1;
@@ -2199,7 +2199,7 @@ font-size: 21px;
 }
 /* team area css */
 .consit_team_area {
-    background-image: url(/assets/images/team-bg.jpg);
+    background-image: url(../images/team-bg.jpg);
     padding: 100px 0px 100px;
     background-position: center center;
     background-repeat: no-repeat;
@@ -2657,7 +2657,7 @@ font-size: 21px;
     margin-bottom: 23px;
 }
 .testimonial_page_testimonial_area2{
-	background-image: url("/assets/images/service-bg-img.jpg");
+	background-image: url("../images/service-bg-img.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -3031,7 +3031,7 @@ padding: 10px 15px 0px;
 }
 /* contact area css */
 .consit_contact_area {
-    background-image: url("/assets/images/contact-bg.jpg");
+    background-image: url("../images/contact-bg.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -3867,7 +3867,7 @@ ul.page-numbers a.page-numbers {
 }
 /*======== footer area css  ======= */
 .witrfm_area {
-	background-image:url(/assets/images/fottor-bg.jpg);
+	background-image:url(../images/fottor-bg.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -4211,7 +4211,7 @@ button.ytp-large-play-button.ytp-button{
      font-size: 36px;
 }
 .breadcumb-area {
-    background-image: url("/assets/images/slide-03.jpg");
+    background-image: url("../images/slide-03.jpg");
     padding: 140px 0px;
     background-color: rgba(0,0,0,0.39);
     background-position: center center;
